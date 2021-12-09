@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/build/toastr.min.css"/>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/build/toastr.min.js"></script>
+    <title>Coffee Sometime?</title>
+</head>
+<!--Unauthenticated Navbar-->
+<body style="background: radial-gradient(circle, rgba(213,134,203,1) 0%, rgba(62,90,180,1) 100%);">
+    <div class="container-fluid">
+        <div class="row border-bottom border-dark sticky-top" style="background: linear-gradient(90deg, rgba(184,86,86,1) 0%, rgba(213,134,203,1) 50%, rgba(184,86,86,1) 100%);">
+            <div class="col">
+                <nav class="navbar navbar-expand-lg navbar-light ms-2">
+                      <a class="navbar-brand" href="/" style="font-size: 1.5rem;">☕❤️ Coffee Sometime?</a>
+                      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                          <li class="nav-item">
+                            <a class="nav-link" href="#sign-up-modal" data-bs-toggle="modal" style="font-size: 1.05rem; font-weight: bold;">Sign Up</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="/about" style="font-size: 1.05rem; font-weight: bold;">About</a>
+                          </li>
+                        </ul>
+                      </div>
+                  </nav>
+            </div>
+        </div>
+        
+<!--Sign-Up Modal-->
+<div class="modal fade text-dark" id="sign-up-modal" tabindex="-1" aria-labelledby="sign-up-label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title m-auto" id="sign-up-label">☕Get ready to drink some coffee!❤️</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-2">
+                            <label for="email-address" class="form-label">E-mail Address</label>
+                            <input type="email" class="form-control" id="email-address" placeholder="email@example.domain">
+                        </div>
+                        <div class="mb-2">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="••••••••••••••">
+                        </div>
+                        <div class="mb-2">
+                            <label for="password-confirm" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="password-confirm" placeholder="••••••••••••••">
+                        </div>
+                        <div class="mb-2">
+                            <label for="first-name" class="form-label">First Name</label>
+                            <input type="text" class="form-control" id="first-name" placeholder="Jane/John">
+                        </div>
+                        <div class="mb-2">
+                            <label for="birthdate" class="form-label">Birthdate</label>
+                            <input type="date" class="form-control" id="birthdate" placeholder="dd/mm/yyyy">
+                        </div>
+                        <div class="mb-2">
+                            <label for="gender" class="form-label">Gender</label>
+                            <select class="form-control form-select" id="gender">
+                                <option selected disabled hidden>Select Gender</option>
+                                <option value="woman">Woman</option>
+                                <option value="man">Man</option>
+                            </select>
+                        </div>
+                        <div class="mb-2">
+                            <label for="sexuality" class="form-label">Sexuality</label>
+                            <select class="form-control form-select" id="sexuality">
+                                <option selected disabled hidden>Select Sexuality</option>
+                                <option value="heterosexual">Heterosexual</option>
+                                <option value="homosexual">Homosexual</option>
+                                <option value="bisexual">Bisexual</option>
+                            </select>
+                        </div>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="newsletter-confirm">
+                            <label class="form-check-label" for="newsletter-confirm">Subscribe to our newsletter!☕❤️</label>
+                        </div>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="terms-of-service-confirm">
+                            <label class="form-check-label" for="terms-of-service-confirm">Agree to our <a href="/terms-of-service" class="text-decoration-none text-rest">Terms Of Service</a></label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-success" id="sign-up-confirm">Confirm</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                </div>
+        </div>
+    </div>
+</div>

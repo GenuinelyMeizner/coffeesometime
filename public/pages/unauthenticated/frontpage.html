@@ -1,0 +1,68 @@
+<!--Main-->
+<div class="row h-auto">
+    <div class="col">
+        
+    </div>
+    <div class="col d-flex flex-column min-vh-100 justify-content-center align-items-center ">
+        <div class="card w-75">
+            <div class="card-body">
+                <div class="card-header">
+                    <h2 class="card-title text-center">Welcome</h2>
+                    <h5 class="card-subtitle text-center">☕Please Sign In❤️</h4>
+                </div>
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label" for="sign-in-email">E-mail Address</label>
+                        <input class="form-control" id="sign-up-email" type="email" placeholder="email@example.domain">
+                        <div class="form-text text-center">We'll never share your e-mail</div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="sign-in-password">Password</label>
+                        <input class="form-control" id="sign-in-password" type="password" placeholder="••••••••••••••">
+                        <div class="form-text text-center" id="forgot-password">
+                            <a href="#password-recovery-modal" class="form-link text-decoration-none text-reset" data-bs-toggle="modal">Forgotten password? Click here!❤️</a>
+                        </div>
+                    </div>
+                    <div class="text-center mb-3">
+                        <button class="btn btn-primary text-center" id="sign-in-button">Sign In</button>
+                    </div>
+                </form>
+                <div class="card-footer">
+                    <div class="text-center">
+                        <p class="text-center">No account yet?</p>
+                        <button class="btn btn-success text-center" id="sign-up-button" data-bs-toggle="modal" data-bs-target="#sign-up-modal">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+
+    </div>
+</div>
+<script src="frontpage.js"></script>
+
+<!--Password Recovery Modal-->
+<div class="modal fade text-dark" id="password-recovery-modal" tabindex="-1" aria-labelledby="password-recovery-label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title m-auto" id="password-recovery-label">☕We're here to help!❤️</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-2">
+                            <label for="password-recovery-email" class="form-label">E-mail Address</label>
+                            <input type="email" class="form-control" id="password-recovery-email" placeholder="email@example.domain">
+                            <div class="form-text text-center">We'll send a password recovery e-mail to the assoicated account</div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-success" id="sign-up-confirm">Confirm</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                </div>
+        </div>
+    </div>
+</div>
