@@ -2,6 +2,7 @@ import express from "express";
 import path from "path";
 import { urlencoded } from "express";
 import { createUnauthenticatedPage } from "./render.js";
+import signUpRoute from "./routers/sign-up-route.js";
 
 const app = express();
 
@@ -14,6 +15,8 @@ app.use("/build", express.static(__dirname + '/node_modules/toastr/build/'));
 app.use("/css", express.static(__dirname + '/node_modules/bootstrap/dist/css'));
 app.use(express.json());
 app.use(urlencoded({extended : true}));
+app.use("/users", signUpRoute);
+
 
 const frontpage = createUnauthenticatedPage("/pages/unauthenticated/frontpage.html");
 const about = createUnauthenticatedPage("/pages/unauthenticated/about.html");
