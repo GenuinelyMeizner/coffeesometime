@@ -52,12 +52,12 @@ function createUser() {
         })
     }).then(response => {
         if(response.status === 201) {
-            console.log("Created");
-            //windows.location.replace("https://coffeesometime.herokuapp.com/landing-page/hex")
+            toastr.success("User created - Redirecting to login");
+            setTimeout(() => location.href = "/", 2000);
         } else if (response.status === 400) {
-            toastr.error("E-mail already registered")
+            toastr.error("E-mail already registered");
         } else if (response.status === 500) {
-            toastr.error("Internal Server Error, please try again")
+            toastr.error("Internal Server Error, please try again");
         }
     })
 }
