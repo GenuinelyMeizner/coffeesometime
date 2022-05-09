@@ -18,7 +18,8 @@ signUpRoute.post("/", async (req, res) => {
         const salt = await bcrypt.genSalt();
 
         if (Object.entries(rows).length === 0) {
-            await connect.execute(        
+     
+            await connect.execute(
                 `
                 INSERT INTO users (email, password, first_name, birthdate, gender, sexuality, subscribed, tos_agreement)
                 VALUES (?, ?, ?, ?, ?, ?, ?, ?)
@@ -36,9 +37,10 @@ signUpRoute.post("/", async (req, res) => {
             connect.release();
             return res.status(201).send();
         } else {
+            connect.release();
             return res.status(400).send();
         }
-        
+
     } catch (error) {
         console.log(error)
         return res.status(500).send();
@@ -46,4 +48,4 @@ signUpRoute.post("/", async (req, res) => {
 
 });
 
-export default signUpRoute;
+export { signUpRoute };

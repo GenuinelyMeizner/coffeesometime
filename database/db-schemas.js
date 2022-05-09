@@ -7,7 +7,7 @@ import connectionPool from "./db-connection.js";
     const userTable = `CREATE TABLE IF NOT EXISTS users (
         user_id INT AUTO_INCREMENT PRIMARY KEY,
         email VARCHAR(50) NOT NULL UNIQUE,
-        password VARCHAR(50) NOT NULL,
+        password VARCHAR(255) NOT NULL,
         first_name VARCHAR(50) NOT NULL,
         birthdate DATE NOT NULL,
         gender VARCHAR(50) NOT NULL,
