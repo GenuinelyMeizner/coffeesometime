@@ -13,7 +13,7 @@ function loginUser() {
         })
     }).then(response => {
         if (response.status === 200) {
-            location.href = "/about";
+            location.href = "/dashboard";
         } else if (response.status === 400) {
             toastr.error("Incorrect credentials");
         } else if (response.status === 500) {
